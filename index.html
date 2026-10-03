@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>sistemRICAL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot" class="boot"><div class="boot-logo">R</div><div class="boot-name">sistemRICAL</div><div class="loader"><i></i></div><small>Iniciando entorno</small></div>
+<div id="desktop" class="desktop hidden">
+  <div class="wallpaper"></div>
+  <div id="desktopIcons" class="desktop-icons">
+    <button class="desk-icon" data-open="explorer"><span>▣</span><b>Archivos</b></button>
+    <button class="desk-icon" data-open="store"><span>◈</span><b>sistemRICAL Store</b></button>
+    <button class="desk-icon" data-open="settings"><span>⚙</span><b>Configuración</b></button>
+    <button class="desk-icon" data-open="terminal"><span>⌘</span><b>Terminal</b></button>
+  </div>
+
+  <section id="windows"></section>
+
+  <div id="startMenu" class="start-menu">
+    <div class="start-head"><strong>sistemRICAL</strong><button id="closeStart">×</button></div>
+    <div class="searchbox"><span>⌕</span><input id="startSearch" placeholder="Buscar aplicaciones, archivos y ajustes"></div>
+    <div class="start-section"><b>Aplicaciones</b><div class="app-grid">
+      <button data-open="store">◈<small>Store</small></button><button data-open="explorer">▣<small>Archivos</small></button>
+      <button data-open="browser">◎<small>Browser</small></button><button data-open="settings">⚙<small>Ajustes</small></button>
+      <button data-open="terminal">⌘<small>Terminal</small></button><button data-open="about">ⓘ<small>Acerca de</small></button>
+    </div></div>
+    <div class="start-bottom"><span>● Usuario</span><button id="powerBtn">⏻</button></div>
+  </div>
+
+  <div id="notificationCenter" class="notification-center">
+    <div class="panel-title">Centro de control</div>
+    <div class="quick-grid">
+      <button class="quick active" data-toggle="wifi">Wi‑Fi<span>Conectado</span></button>
+      <button class="quick active" data-toggle="bluetooth">Bluetooth<span>Activado</span></button>
+      <button class="quick" data-toggle="night">Modo noche<span>Desactivado</span></button>
+      <button class="quick" data-toggle="performance">Rendimiento<span>Equilibrado</span></button>
+    </div>
+    <div class="volume"><span>🔊</span><input id="volume" type="range" value="72"></div>
+    <div class="notif"><b>sistemRICAL</b><p>Bienvenido a tu nuevo escritorio.</p></div>
+  </div>
+
+  <footer class="taskbar">
+    <button id="startBtn" class="task start">R</button>
+    <button id="searchBtn" class="task">⌕</button>
+    <div id="pinned" class="pinned"><button class="task" data-open="store">◈</button><button class="task" data-open="explorer">▣</button><button class="task" data-open="browser">◎</button><button class="task" data-open="terminal">⌘</button></div>
+    <div class="task-spacer"></div>
+    <div class="status"><span id="net">⌁</span><span>🔊</span><span id="battery">▰</span><button id="notifyBtn">▢</button><button id="clock">12:56</button></div>
+  </footer>
+  <div id="searchOverlay" class="search-overlay"><input id="globalSearch" autofocus placeholder="Escribe para buscar..."><div id="searchResults"></div></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
